@@ -1,0 +1,12 @@
+=== A simple postcard ===
+
+A minimal React + Vite SPA showcasing a spa postcard design.
+Original design: https://www.figma.com/design/ZjsDPyOpCQMdTPqYz8feU7/Spa-Company-Postcard-Design
+
+Run and build it:
+
+```bash
+bun install      # or npm i / pnpm i / yarn
+bun run dev      # start dev server
+bun run build    # build to build/
+```
