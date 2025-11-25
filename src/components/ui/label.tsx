@@ -10,7 +10,7 @@ export function Label({ children, htmlFor, className = "" }: LabelProps) {
   return (
     <label
       htmlFor={htmlFor}
-      className={`block text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-2 ${className}`}
+      className={`block text-xs uppercase tracking-wider font-semibold text-neutral-300 mb-2 ${className}`}
     >
       {children}
     </label>

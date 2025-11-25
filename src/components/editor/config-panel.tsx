@@ -34,7 +34,8 @@ export function ConfigPanel({
       {/* reset button */}
       <button
         onClick={onReset}
-        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors text-sm font-medium"
+        aria-label="Reset to defaults"
+        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
       >
         <RotateCcw className="w-4 h-4 stroke-[1.5]" />
         Reset to defaults
