@@ -2,11 +2,12 @@ import { CSSProperties } from "react";
 import { PostcardConfig, PostcardContent } from "@/types/config";
 import { ClassicLayout } from "./layouts/classic-layout";
 import { OrganicLayout } from "./layouts/organic-layout";
+import { SwissLayout } from "./layouts/swiss-layout";
 
 const LAYOUT_COMPONENTS = {
   classic: ClassicLayout,
   organic: OrganicLayout,
-  swiss: ClassicLayout,
+  swiss: SwissLayout,
   ethereal: ClassicLayout,
 };
 
