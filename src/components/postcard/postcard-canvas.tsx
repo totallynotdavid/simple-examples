@@ -1,7 +1,6 @@
 import { CSSProperties } from "react";
 import { PostcardConfig, PostcardContent } from "@/types/config";
 import { TextureOverlay } from "./texture-overlay";
-
 import { ClassicLayout } from "./layouts/classic-layout";
 import { OrganicLayout } from "./layouts/organic-layout";
 import { SwissLayout } from "./layouts/swiss-layout";
@@ -17,38 +16,39 @@ const LAYOUT_COMPONENTS = {
 interface PostcardCanvasProps {
   config: PostcardConfig;
   content: PostcardContent;
+  showTexture?: boolean;
 }
 
-export function PostcardCanvas({ config, content }: PostcardCanvasProps) {
+export function PostcardCanvas({
+  config,
+  content,
+  showTexture = true,
+}: PostcardCanvasProps) {
   const LayoutComponent = LAYOUT_COMPONENTS[config.layout];
 
   const dynamicStyles = {
     "--p-bg": config.style.backgroundColor,
     "--p-ink": config.style.textColor,
     "--p-accent": config.style.accentColor,
-
     "--p-font-head": config.style.fontHeading,
     "--p-font-body": config.style.fontBody,
-
     "--p-padding": `${config.style.padding}rem`,
     "--p-gap": `${config.style.gap}rem`,
   } as CSSProperties;
 
   return (
-    <div className="relative flex items-center justify-center bg-gray-100 p-8 rounded-xl shadow-inner overflow-hidden min-h-[500px]">
-      <div
-        style={{
-          width: config.dimensions.width,
-          height: config.dimensions.height,
-          ...dynamicStyles,
-        }}
-        className="bg-white shadow-2xl transition-all duration-300 relative transition-preview isolate"
-      >
-        <LayoutComponent content={content} />
+    <div
+      id="postcard-export-target"
+      style={{
+        width: config.dimensions.width,
+        height: config.dimensions.height,
+        ...dynamicStyles,
+      }}
+      className="bg-white shadow-2xl transition-all duration-300 relative transition-preview isolate overflow-hidden"
+    >
+      <LayoutComponent content={content} />
 
-        {/* texture overlay (applies to all layouts) */}
-        <TextureOverlay opacity={config.style.textureOpacity} />
-      </div>
+      {showTexture && <TextureOverlay opacity={config.style.textureOpacity} />}
     </div>
   );
 }
