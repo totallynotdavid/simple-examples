@@ -23,11 +23,17 @@ export function usePostcardEditor() {
     setConfig((prev) => ({ ...prev, layout }));
   }, []);
 
+  const resetConfig = useCallback(() => {
+    setConfig(DEFAULT_CONFIG);
+    setContent(DEFAULT_CONTENT);
+  }, []);
+
   return {
     config,
     content,
     setContent,
     updateStyle,
     updateLayout,
+    resetConfig,
   };
 }

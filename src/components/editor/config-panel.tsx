@@ -2,11 +2,13 @@ import { PostcardConfig, LayoutId, PostcardStyle } from "@/types/config";
 import { Slider } from "./controls/slider";
 import { ColorPicker } from "./controls/color-picker";
 import { Select } from "./controls/select";
+import { RotateCcw } from "lucide-react";
 
 interface ConfigPanelProps {
   config: PostcardConfig;
   onUpdateStyle: (key: keyof PostcardStyle, value: string | number) => void;
   onUpdateLayout: (layout: LayoutId) => void;
+  onReset: () => void;
 }
 
 const LAYOUT_OPTIONS = [
@@ -25,9 +27,20 @@ export function ConfigPanel({
   config,
   onUpdateStyle,
   onUpdateLayout,
+  onReset,
 }: ConfigPanelProps) {
   return (
     <div className="space-y-8 pb-12">
+      {/* reset button */}
+      <button
+        onClick={onReset}
+        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors text-sm font-medium"
+      >
+        <RotateCcw className="w-4 h-4 stroke-[1.5]" />
+        Reset to defaults
+      </button>
+
+      <hr className="border-neutral-800" />
       {/* type of layout */}
       <section className="space-y-4">
         <Select

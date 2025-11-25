@@ -5,7 +5,8 @@ import { ConfigPanel } from "@/components/editor/config-panel";
 import { usePostcardEditor } from "@/hooks/use-postcard-editor";
 
 function App() {
-  const { config, content, updateStyle, updateLayout } = usePostcardEditor();
+  const { config, content, updateStyle, updateLayout, resetConfig } =
+    usePostcardEditor();
 
   return (
     <div className="min-h-screen bg-neutral-900 text-white flex overflow-hidden">
@@ -36,6 +37,7 @@ function App() {
             config={config}
             onUpdateStyle={updateStyle}
             onUpdateLayout={updateLayout}
+            onReset={resetConfig}
           />
         </div>
       </aside>
