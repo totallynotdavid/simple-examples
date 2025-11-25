@@ -17,7 +17,7 @@ function App() {
             <div className="w-3 h-3 rounded-full bg-yellow-500" />
             <div className="w-3 h-3 rounded-full bg-green-500" />
             <span className="ml-3 text-sm font-medium text-neutral-400">
-              Postcard.Builder
+              Postcard.Builder by @totallynotdavid
             </span>
           </div>
         </header>
