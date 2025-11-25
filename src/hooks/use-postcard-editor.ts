@@ -1,6 +1,12 @@
 import { useState, useCallback } from "react";
 import { DEFAULT_CONFIG, DEFAULT_CONTENT } from "@/data/default-content";
-import { PostcardConfig, PostcardContent, PostcardStyle } from "@/types/config";
+import { LAYOUT_PRESETS } from "@/data/layout-presets";
+import {
+  PostcardConfig,
+  PostcardContent,
+  PostcardStyle,
+  LayoutId,
+} from "@/types/config";
 
 export function usePostcardEditor() {
   const [config, setConfig] = useState<PostcardConfig>(DEFAULT_CONFIG);
@@ -19,8 +25,12 @@ export function usePostcardEditor() {
     [],
   );
 
-  const updateLayout = useCallback((layout: PostcardConfig["layout"]) => {
-    setConfig((prev) => ({ ...prev, layout }));
+  const updateLayout = useCallback((layout: LayoutId) => {
+    setConfig((prev) => ({
+      ...prev,
+      layout,
+      style: LAYOUT_PRESETS[layout],
+    }));
   }, []);
 
   const resetConfig = useCallback(() => {

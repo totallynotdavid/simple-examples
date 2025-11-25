@@ -1,4 +1,5 @@
 import { PostcardConfig, PostcardContent } from "@/types/config";
+import { LAYOUT_PRESETS } from "./layout-presets";
 
 export const DEFAULT_CONTENT: PostcardContent = {
   title: "Serenity",
@@ -27,14 +28,5 @@ export const DEFAULT_CONFIG: PostcardConfig = {
     width: 600,
     height: 400,
   },
-  style: {
-    fontHeading: "sans",
-    fontBody: "sans",
-    backgroundColor: "#ffffff",
-    textColor: "#1a3a38",
-    accentColor: "#7a9d9c",
-    padding: 2.5, // rem
-    gap: 1, // rem
-    textureOpacity: 0,
-  },
+  style: LAYOUT_PRESETS["classic"],
 };
