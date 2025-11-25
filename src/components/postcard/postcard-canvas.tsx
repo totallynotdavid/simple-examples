@@ -26,9 +26,10 @@ export function PostcardCanvas({ config, content }: PostcardCanvasProps) {
     "--p-bg": config.style.backgroundColor,
     "--p-ink": config.style.textColor,
     "--p-accent": config.style.accentColor,
-    "--p-font-head":
-      config.style.fontHeading === "serif" ? "serif" : "sans-serif",
-    "--p-font-body": config.style.fontBody === "serif" ? "serif" : "sans-serif",
+
+    "--p-font-head": config.style.fontHeading,
+    "--p-font-body": config.style.fontBody,
+
     "--p-padding": `${config.style.padding}rem`,
     "--p-gap": `${config.style.gap}rem`,
   } as CSSProperties;

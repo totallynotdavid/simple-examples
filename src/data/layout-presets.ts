@@ -2,8 +2,8 @@ import { LayoutId, PostcardStyle } from "@/types/config";
 
 export const LAYOUT_PRESETS: Record<LayoutId, PostcardStyle> = {
   classic: {
-    fontHeading: "serif",
-    fontBody: "sans",
+    fontHeading: "var(--font-cormorant)",
+    fontBody: "var(--font-lato)",
     backgroundColor: "#F3F2ED",
     textColor: "#4A5D4F",
     accentColor: "#8C9E8E",
@@ -12,8 +12,8 @@ export const LAYOUT_PRESETS: Record<LayoutId, PostcardStyle> = {
     textureOpacity: 0.25,
   },
   swiss: {
-    fontHeading: "sans",
-    fontBody: "sans",
+    fontHeading: "var(--font-oswald)",
+    fontBody: "var(--font-inter)",
     backgroundColor: "#F5F5F0",
     textColor: "#1A1A1A",
     accentColor: "#FF3333",
@@ -22,8 +22,8 @@ export const LAYOUT_PRESETS: Record<LayoutId, PostcardStyle> = {
     textureOpacity: 0.05,
   },
   organic: {
-    fontHeading: "sans",
-    fontBody: "sans",
+    fontHeading: "var(--font-syne)",
+    fontBody: "var(--font-space)",
     backgroundColor: "#FFFFFF",
     textColor: "#2D3436",
     accentColor: "#81ECEC",
@@ -32,8 +32,8 @@ export const LAYOUT_PRESETS: Record<LayoutId, PostcardStyle> = {
     textureOpacity: 0,
   },
   ethereal: {
-    fontHeading: "serif",
-    fontBody: "serif",
+    fontHeading: "var(--font-bodoni)",
+    fontBody: "var(--font-lato)",
     backgroundColor: "#FFFEFA",
     textColor: "#636E72",
     accentColor: "#DFE6E9",

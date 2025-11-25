@@ -5,8 +5,13 @@
     "": {
       "name": "a-nice-postcard",
       "dependencies": {
+        "@fontsource/bodoni-moda": "^5.2.7",
+        "@fontsource/cormorant-garamond": "^5.2.11",
         "@fontsource/inter": "^5.2.8",
-        "@fontsource/playfair-display": "^5.2.8",
+        "@fontsource/lato": "^5.2.7",
+        "@fontsource/oswald": "^5.2.8",
+        "@fontsource/space-grotesk": "^5.2.10",
+        "@fontsource/syne": "^5.2.7",
         "lucide-react": "^0.554.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -78,9 +83,19 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.12", "", { "os": "win32", "cpu": "x64" }, "sha512-alJC0uCZpTFrSL0CCDjcgleBXPnCrEAhTBILpeAp7M/OFgoqtAetfBzX0xM00MUsVVPpVjlPuMbREqnZCXaTnA=="],
 
+    "@fontsource/bodoni-moda": ["@fontsource/bodoni-moda@5.2.7", "", {}, "sha512-lsOtgDTdfmoenXOskQ63tbzbVJh05qlc1xLaImG2qayaF88kiVvLAk1nM37eoYRMZTrDZlN5zlu6zG8TnXgn4w=="],
+
+    "@fontsource/cormorant-garamond": ["@fontsource/cormorant-garamond@5.2.11", "", {}, "sha512-5JjpN023lhA5soijgVT0BdRGzmlijm402ppjccMd6h+vRE0mX2lJnE+41UPfnlidrkV9/rCo1mf58WZlHnB0CA=="],
+
     "@fontsource/inter": ["@fontsource/inter@5.2.8", "", {}, "sha512-P6r5WnJoKiNVV+zvW2xM13gNdFhAEpQ9dQJHt3naLvfg+LkF2ldgSLiF4T41lf1SQCM9QmkqPTn4TH568IRagg=="],
 
-    "@fontsource/playfair-display": ["@fontsource/playfair-display@5.2.8", "", {}, "sha512-fUEhib70SszNhQVsGbUMSsWJhr7Je0rdeuZdtGpDNu0GKF1xJM8QhpI/y0pckU25GcChXm9TLOmeZupkvvZo2g=="],
+    "@fontsource/lato": ["@fontsource/lato@5.2.7", "", {}, "sha512-k5mum1ADbDW5cTw1Ett1eQVWeoZ6gq0ct6SFBibEhB4LRxhniChJZTBgd6ph5yBxLkN1fcnsnmicBNA4S/3nbw=="],
+
+    "@fontsource/oswald": ["@fontsource/oswald@5.2.8", "", {}, "sha512-DFoPK1BqsFIQhVjs2xgO/oL9veF9oUJgFojEWIU+nazUrfqsBDtAMI4n9L9CZFX3kQNDLcCyzKx1xoEDvQT4WQ=="],
+
+    "@fontsource/space-grotesk": ["@fontsource/space-grotesk@5.2.10", "", {}, "sha512-XNXEbT74OIITPqw2H6HXwPDp85fy43uxfBwFR5PU+9sLnjuLj12KlhVM9nZVN6q6dlKjkuN8JisW/OBxwxgUew=="],
+
+    "@fontsource/syne": ["@fontsource/syne@5.2.7", "", {}, "sha512-OgWgLPSbieiSfdFXgMs0l/rspIFzVoDZxw8wKj15n39epRqO5+Uv36c0MXNDcw2GuK/TIBgpC9G8VAgs+bVm7A=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 

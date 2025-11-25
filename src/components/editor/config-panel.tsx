@@ -19,8 +19,13 @@ const LAYOUT_OPTIONS = [
 ];
 
 const FONT_OPTIONS = [
-  { label: "Sans Serif", value: "sans" },
-  { label: "Serif", value: "serif" },
+  { label: "Inter (UI standard)", value: "var(--font-inter)" },
+  { label: "Cormorant (elegant)", value: "var(--font-cormorant)" },
+  { label: "Lato (clean)", value: "var(--font-lato)" },
+  { label: "Oswald (impact)", value: "var(--font-oswald)" },
+  { label: "Syne (artistic)", value: "var(--font-syne)" },
+  { label: "Space Grotesk (tech)", value: "var(--font-space)" },
+  { label: "Bodoni (fashion)", value: "var(--font-bodoni)" },
 ];
 
 export function ConfigPanel({
