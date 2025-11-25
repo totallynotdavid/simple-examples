@@ -1,14 +1,17 @@
 import { CSSProperties } from "react";
 import { PostcardConfig, PostcardContent } from "@/types/config";
+import { TextureOverlay } from "./texture-overlay";
+
 import { ClassicLayout } from "./layouts/classic-layout";
 import { OrganicLayout } from "./layouts/organic-layout";
 import { SwissLayout } from "./layouts/swiss-layout";
+import { EtherealLayout } from "./layouts/ethereal-layout";
 
 const LAYOUT_COMPONENTS = {
   classic: ClassicLayout,
   organic: OrganicLayout,
   swiss: SwissLayout,
-  ethereal: ClassicLayout,
+  ethereal: EtherealLayout,
 };
 
 interface PostcardCanvasProps {
@@ -38,15 +41,12 @@ export function PostcardCanvas({ config, content }: PostcardCanvasProps) {
           height: config.dimensions.height,
           ...dynamicStyles,
         }}
-        className="bg-white shadow-2xl transition-all duration-300 relative transition-preview"
+        className="bg-white shadow-2xl transition-all duration-300 relative transition-preview isolate"
       >
         <LayoutComponent content={content} />
 
-        {/* texture overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none mix-blend-multiply"
-          style={{ opacity: config.style.textureOpacity }}
-        />
+        {/* texture overlay (applies to all layouts) */}
+        <TextureOverlay opacity={config.style.textureOpacity} />
       </div>
     </div>
   );
