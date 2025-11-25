@@ -121,3 +121,34 @@
     background: #d4d4d4;
   }
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #postcard-export-target,
+  #postcard-export-target * {
+    visibility: visible;
+  }
+
+  #postcard-export-target {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0;
+    box-shadow: none;
+    border: 1px solid #ddd;
+
+    /* FORCE TEXTURES TO PRINT */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body,
+  #root,
+  main {
+    background: white !important;
+  }
+}

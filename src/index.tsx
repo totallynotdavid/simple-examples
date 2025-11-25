@@ -1,13 +1,13 @@
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
-
 import "./index.css";
-
 import { PostcardCanvas } from "@/components/postcard/postcard-canvas";
 import { ConfigPanel } from "@/components/editor/config-panel";
 import { usePostcardEditor } from "@/hooks/use-postcard-editor";
 import { ViewToolbar } from "@/components/editor/view-toolbar";
 import { Download } from "lucide-react";
+
+const BASE_SCALE = 1.5;
 
 function App() {
   const { config, content, updateStyle, updateLayout, resetConfig } =
@@ -17,7 +17,8 @@ function App() {
   const [showTexture, setShowTexture] = useState(true);
 
   const handleExport = () => {
-    alert("Export feature coming next!");
+    document.title = `${content.title} - Postcard`;
+    window.print();
   };
 
   return (
@@ -35,6 +36,7 @@ function App() {
             <button
               onClick={handleExport}
               className="flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-neutral-200 rounded-lg text-sm font-semibold shadow-lg transition-colors"
+              title="Save as PDF using browser print"
             >
               <Download className="w-4 h-4" />
               Export PDF
@@ -45,8 +47,8 @@ function App() {
         {/* workspace */}
         <main className="flex-1 flex items-center justify-center overflow-hidden relative">
           <div
-            style={{ transform: `scale(${zoom})` }}
-            className="transition-transform duration-200 ease-out"
+            style={{ transform: `scale(${zoom * BASE_SCALE})` }}
+            className="transition-transform duration-200 ease-out origin-center"
           >
             <PostcardCanvas
               config={config}
@@ -55,12 +57,12 @@ function App() {
             />
           </div>
 
-          {/* floating toolbar */}
+          {/* toolbar */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
             <ViewToolbar
               zoom={zoom}
-              onZoomIn={() => setZoom((z) => Math.min(z + 0.1, 1.5))}
-              onZoomOut={() => setZoom((z) => Math.max(z - 0.1, 0.5))}
+              onZoomIn={() => setZoom((z) => Math.min(z + 0.25, 2.0))}
+              onZoomOut={() => setZoom((z) => Math.max(z - 0.25, 0.5))}
               showTexture={showTexture}
               onToggleTexture={() => setShowTexture(!showTexture)}
             />
