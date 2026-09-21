@@ -8,7 +8,7 @@
         "@fontsource/bodoni-moda": "^5.2.7",
         "@fontsource/cormorant-garamond": "^5.2.11",
         "@fontsource/inter": "^5.2.8",
-        "@fontsource/lato": "^5.2.7",
+        "@fontsource/lato": "^5.3.0",
         "@fontsource/oswald": "^5.2.8",
         "@fontsource/space-grotesk": "^5.2.10",
         "@fontsource/syne": "^5.2.7",
@@ -89,7 +89,7 @@
 
     "@fontsource/inter": ["@fontsource/inter@5.2.8", "", {}, "sha512-P6r5WnJoKiNVV+zvW2xM13gNdFhAEpQ9dQJHt3naLvfg+LkF2ldgSLiF4T41lf1SQCM9QmkqPTn4TH568IRagg=="],
 
-    "@fontsource/lato": ["@fontsource/lato@5.2.7", "", {}, "sha512-k5mum1ADbDW5cTw1Ett1eQVWeoZ6gq0ct6SFBibEhB4LRxhniChJZTBgd6ph5yBxLkN1fcnsnmicBNA4S/3nbw=="],
+    "@fontsource/lato": ["@fontsource/lato@5.3.0", "", {}, "sha512-0WhF/4rhrw+ErIyneKvhHn2YAl+xf8GDtllgOgOzDmeaSlLQtjpChXaQOpWhG2BchQW0WJy2zLV12Hdg0ndOMw=="],
 
     "@fontsource/oswald": ["@fontsource/oswald@5.2.8", "", {}, "sha512-DFoPK1BqsFIQhVjs2xgO/oL9veF9oUJgFojEWIU+nazUrfqsBDtAMI4n9L9CZFX3kQNDLcCyzKx1xoEDvQT4WQ=="],
 
